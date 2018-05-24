@@ -1,0 +1,118 @@
+<!-- <div class="container">  
+    <div class="row">
+        <div class="col"> 
+            <div [routerLink]="['/injureds']" class="alert alert-danger" role="alert" style="width: 18rem;">
+                <h2>Active Injureds:</h2>
+                <h3>{{injureds.length}}</h3>
+            </div>
+        </div>
+        <div class="col">
+            <div [routerLink]="['/emsevents']" class="alert alert-warning" role="alert" style="width: 18rem;">
+                <h2>Active Events:</h2>
+                <h3>{{activeEvents.length}}</h3>
+            </div>
+        </div>
+    </div>
+</div>  -->
+
+<div class="container-fluid" id="main">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Reports▾</a>
+                    <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
+                       <li class="nav-item"><a class="nav-link" href="">Report 1</a></li>
+                       <li class="nav-item"><a class="nav-link" href="">Report 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Export</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Snippets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Flexbox</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Layouts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Templates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Themes</a></li>
+            </ul>
+        </div>
+        <!--/col-->
+
+        <div class="col main pt-5 mt-3">
+            <h1 class="display-4 d-none d-sm-block">
+            Managment Dashboard
+            </h1>
+            <p class="lead d-none d-sm-block">Emergency Medical service</p>
+
+            <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>Holy guacamole!</strong> It's free.. this is an example theme.
+            </div>
+            <div class="row mb-3">
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card bg-success text-white h-100">
+                        <div  [routerLink]="['/users']" class="card-body bg-success">
+                            <div class="rotate">
+                                <i class="fa fa-user fa-4x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Users</h6>
+                            <h1 class="display-4">{{activeUsers.length}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-danger h-100">
+                        <div  [routerLink]="['/injureds']" class="card-body bg-danger">
+                            <div class="rotate">
+                                <i class="fa fa-list fa-4x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Injuresd</h6>
+                            <h1 class="display-4">{{injureds.length}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-info h-100">
+                        <div [routerLink]="['/hospitals']" class="card-body bg-info">
+                            <div class="rotate">
+                                <i class="fa fa-twitter fa-4x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Hospitals</h6>
+                            <h1 class="display-4">{{hospitals.length}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-warning h-100">
+                        <div [routerLink]="['/emsevents']" class="card-body">
+                            <div class="rotate">
+                                <i class="fa fa-share fa-4x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Events</h6>
+                            <h1 class="display-4">{{activeEvents.length}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+            <hr>
+
+            <h2 class="sub-header mt-5">Active Events Now</h2>
+            <div class="mb-3">
+                <div class="card-deck">
+                    <div  class="card card-inverse card-success text-center" *ngFor="let activeEvent of activeEvents">
+                        <div class="card-body">
+                            <blockquote class="card-blockquote">
+                                <p>{{activeEvent.description}}</p>
+                                <footer>{{activeEvent.time}} <cite title="Source Title">Faster</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+            <hr>

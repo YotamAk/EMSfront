@@ -1,0 +1,53 @@
+
+  <h2 class="sub-header mt-5">Active Users</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>  
+          <th>Name</th>
+          <th>Phone Numbers</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activeUser of activeUsers">
+          <td>{{activeUser.id}}</td>
+          <td routerLink="/user-profile/{{activeUser.id}}">{{activeUser.name}}</td>
+          <td>{{activeUser.phone}}</td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="SetInactiveUser(activeUser.id)">InActive</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button [routerLink]="['/add-user']" type="button" class="btn btn-primary">Add User</button>
+
+  <hr>
+  <h2 class="sub-header mt-5">Inactive Users</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>  
+          <th>Name</th>
+          <th>Phone Numbers</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let InActiveUser of InActiveUsers">
+          <td>{{InActiveUser.id}}</td>
+          <td routerLink="/user-profile/{{InActiveUser.id}}">{{InActiveUser.name}}</td>
+          <td>{{InActiveUser.phone}}</td>
+          <td>
+            <button type="button" class="btn btn-success" (click)="SetActiveUser(InActiveUser.id)">Active</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    

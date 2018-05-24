@@ -1,0 +1,40 @@
+<div class="container">
+    <h4>Injureds</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td>ID</td>  
+          <td>Name</td>
+          <td>Air-Way</td>
+          <td>Breathing</td>
+          <td>Circulation</td>
+          <td>Heart-Beat</td>
+          <td>Disability</td>
+          <td>Exposure</td>
+          <td>To Hospital:</td>
+          <td>TandT</td>
+          <td>Severity</td>
+          <td>Event Id</td>
+          <td>Time</td>
+          <td>In hospitsl</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let injured of injureds">
+          <td>{{injured.id}}</td>
+          <td>{{injured.name}}</td>
+          <td>{{injured.airWay}}</td>
+          <td>{{injured.breathing}}</td>
+          <td>{{injured.circulation}}</td>
+          <td>{{injured.heartbeat}}</td>
+          <td>{{injured.disability}}</td>
+          <td>{{injured.exposure}}</td>
+          <td>{{injured.toHospital}}</td>
+          <td>{{injured.TandT}}</td>
+          <td>{{injured.severity}}</td>
+          <td>{{injured.eventId}}</td>
+          <td>{{injured.time}}</td>
+          <td>{{injured.InHospital}}</td>
+        </tr>
+      </tbody>
+    </table>
