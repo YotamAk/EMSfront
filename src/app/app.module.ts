@@ -17,6 +17,11 @@ import { UserProfileComponent } from './main/users/user-profile/user-profile.com
 import { AddUserComponent } from './main/users/add-user/add-user.component';
 import { LoginComponent } from './main/login/login.component';
 import { AddHospitalComponent } from './main/hospitals/add-hospital/add-hospital.component';
+import { EditUserComponent } from './main/users/edit-user/edit-user.component';
+import { EditHospitalComponent } from './main/hospitals/edit-hospital/edit-hospital.component';
+import { EventDetailsComponent } from './main/emsevents/event-details/event-details.component';
+import { EditEventComponent } from './main/emsevents/edit-event/edit-event.component';
+import { InjuredReportComponent } from './main/injureds/injured-report/injured-report.component';
 
 
 @NgModule({
@@ -32,7 +37,12 @@ import { AddHospitalComponent } from './main/hospitals/add-hospital/add-hospital
     UserProfileComponent,
     AddUserComponent,
     LoginComponent,
-    AddHospitalComponent
+    AddHospitalComponent,
+    EditUserComponent,
+    EditHospitalComponent,
+    EventDetailsComponent,
+    EditEventComponent,
+    InjuredReportComponent
   ],
   imports: [
     BrowserModule,

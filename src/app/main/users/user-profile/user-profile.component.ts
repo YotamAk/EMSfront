@@ -12,10 +12,12 @@ export class UserProfileComponent implements OnInit {
   constructor(
       private _EmsService:EmsService,
       private router: Router,
-      private route: ActivatedRoute,
+      private route: ActivatedRoute
       ) { }
+  
   user:any;
   id = this.route.snapshot.params['id'];
+
   ngOnInit() {
       this.getUserById(this.id);
   }
@@ -25,7 +27,6 @@ getUserById(id){
         .getUserById(id)
         .subscribe(user => {
           this.user = user;
-          console.log(user);
       } )
   }
 

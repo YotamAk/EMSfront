@@ -33,7 +33,7 @@ export class AddUserComponent implements OnInit {
 
 
   goBack(){
-    this.router.navigate(['/users']);
+    this.router.navigate(['/users/..']);
   }
 
 }

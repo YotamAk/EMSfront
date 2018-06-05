@@ -1,4 +1,7 @@
 export class Hospital {
+    id : string;
     name: string;
-    location:[number,number];
+    password: string;
+    phone: string;
+    location:[number];
 }

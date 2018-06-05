@@ -74,6 +74,22 @@ export class EmsService {
       });
   }
 
+  getInjuredsByEvent(eventId){
+    return this._http.get(`${this.ApiUrl}/getInjuredsByEvent/${eventId}`)
+      .map(res => res.json());
+  }
+
+
+  getInjuredById(id){
+    return this._http.get(`${this.ApiUrl}/getInjuredById/${id}`)
+      .map(res => res.json());
+  }
+
+  getEventById(id){
+    return this._http.get(`${this.ApiUrl}/getEventById/${id}`)
+      .map(res => res.json());
+  }
+
   getAllActiveUsers(){
     return this._http.get(`${this.ApiUrl}/getAllActiveUsers`)  
       .map(res=>{
@@ -111,6 +127,11 @@ getUserById(id){
       .map(res => res.json());
   }
 
+  getHospitalById(id){
+    return this._http.get(`${this.ApiUrl}/getHospitalById/${id}`)
+      .map(res => res.json());
+  }
+
 
   addNewUser(model){
     console.log(model);
@@ -118,6 +139,23 @@ getUserById(id){
       .map(res => res);
   }
 
+  editUser(model){
+    console.log(model);
+    return this._http.post(`${this.ApiUrl}/editUser`,{'UserDetails':model})
+      .map(res => res);
+  }
+
+  editHospital(model){
+    console.log(model);
+    return this._http.post(`${this.ApiUrl}/editHospital`,{'HospitalDetails':model})
+      .map(res => res);
+  }
+
+  editEvent(model){
+    console.log(model);
+    return this._http.post(`${this.ApiUrl}/editEvent`,{'EventDetails':model})
+      .map(res => res);
+  }
   
 
 addNewHospital(model){

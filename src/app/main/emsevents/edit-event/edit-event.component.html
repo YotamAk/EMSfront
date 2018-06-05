@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Edit User</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-9 personal-info">
+        <h3>User Details</h3>
+
+
+        <form (submit)="editEvent()" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-lg-3 control-label">description:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" placeholder="user name" required [(ngModel)]="model.description" name="description">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="corpId" class="col-lg-3 control-label">Create By:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" placeholder="1-4" [(ngModel)]="model.createByUserID" name="createByUserID" >
+            </div>
+          </div>
+            
+          <div class="form-group">
+            <label for="phone" class="col-lg-3 control-label">Time:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="datetime-local"  [(ngModel)]="model.time" name="time" >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="corpId" class="col-lg-3 control-label">Location:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" placeholder="1-4" [(ngModel)]="model.location" name="location" >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="submit" class="btn btn-primary" value="Save Changes">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<hr>

@@ -1,30 +1,24 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li [routerLinkActive]="['active']" class="nav-item">
-        <a [routerLink]="['/home']" class="nav-link">Home</a>
-      </li>
-      <li [routerLinkActive]="['active']" class="nav-item">
-        <a [routerLink]="['/hospitals']" class="nav-link">Hospitals</a>
-      </li>
-      <li [routerLinkActive]="['active']" class="nav-item">
-        <a [routerLink]="['/users']" class="nav-link">Users</a>
-      </li>  
-    </ul>
-  </div>
-</nav>
- -->
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
-    <div class="navbar-collapse collapse" id="collapsingNavbar">
-        <ul class="navbar-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Fixed navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="navbar-collapse collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
             <li [routerLinkActive]="['active']" class="nav-item active">
-                <a [routerLink]="['/home']" class="nav-link">Home <span class="sr-only">Home</span></a>
+                <a [routerLink]="['/home']" class="nav-link">Home </a>
             </li>
             <li [routerLinkActive]="['active']" class="nav-item">
-                <a [routerLink]="['/users']"  class="nav-link">Users <span class="sr-only">Home</span></a>
+                <a [routerLink]="['/users']"  class="nav-link">Users </a>
             </li>
             <li [routerLinkActive]="['active']" class="nav-item">
-                <a [routerLink]="['/hospitals']" class="nav-link">Hospitals <span class="sr-only">Home</span></a>
+                <a [routerLink]="['/hospitals']" class="nav-link">Hospitals </a>
+            </li>
+            <li [routerLinkActive]="['active']" class="nav-item">
+                <a [routerLink]="['/emsevents']" class="nav-link">Events </a>
+            </li>
+            <li [routerLinkActive]="['active']" class="nav-item">
+                <a [routerLink]="['/injureds']" class="nav-link">Injureds </a>
             </li>
         </ul>
     </div>

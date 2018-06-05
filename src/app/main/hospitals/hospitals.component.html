@@ -13,10 +13,9 @@
         <tr *ngFor="let hospital of hospitals">
           <td>{{hospital.id}}</td>
           <td>{{hospital.name}}</td>
-          <!-- <td routerLink="/user-profile/{{activeUser.id}}">{{activeUser.name}}</td> -->
           <td>{{hospital.location}}</td>
           <td>
-            <!-- <button type="button" class="btn btn-danger" (click)="SetInactiveUser(activeUser.id)">InActive</button> -->
+             <button routerLink="/edit-hospital/{{hospital?.id}}" type="button" class="btn btn-primary">Edit</button>
           </td>
         </tr>
       </tbody>

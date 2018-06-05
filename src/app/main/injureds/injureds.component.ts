@@ -17,12 +17,12 @@ export class InjuredsComponent implements OnInit {
       injureds: any;
 
   ngOnInit() {
-      this.getAllInjureds();
+      this.notHospitalInjureds();
   }
 
-  getAllInjureds(){
+  notHospitalInjureds(){
      this._EmsService
-        .getAllInjureds()
+        .notHospitalInjureds()
         .subscribe(injureds => {
           this.injureds = injureds;
       } )

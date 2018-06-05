@@ -1,22 +1,27 @@
 <div class="container">
-    <h1>New Hospital</h1>
+    <h1>Edit Hospital</h1>
     <hr>
     <div class="row">
       <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">    
+          <input type="file" class="form-control">
+        </div>
+      </div>
       
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
-        <h3>Hospital info</h3>
+        <h3>Hospital Details</h3>
 
 
-        <form (submit)="addNewHospital()" class="form-horizontal" role="form">
+        <form (submit)="editHospital()" class="form-horizontal" role="form">
           <div class="form-group">
             <label for="name" class="col-lg-3 control-label">Name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" placeholder="user name" required [(ngModel)]="model.name" name="name">
+              <input class="form-control" type="text" placeholder="Hospital name" required [(ngModel)]="model.name" name="name">
             </div>
           </div>
-          
             
           <div class="form-group">
             <label for="phone" class="col-lg-3 control-label">Phone Number</label>
@@ -28,15 +33,7 @@
           <div class="form-group">
             <label for="phone" class="col-lg-3 control-label">Location</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" placeholder="X" [(ngModel)]="model.location" name="location[0]" >
-            </div>
-          </div>
-
-
-          <div class="form-group">
-            <label for="phone" class="col-lg-3 control-label">Location</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" placeholder="X" [(ngModel)]="model.location" name="location[1]" >
+              <input class="form-control" type="text" placeholder="X" [(ngModel)]="model.location" name="location" >
             </div>
           </div>
 

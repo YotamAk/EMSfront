@@ -1,0 +1,110 @@
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <h1>Magen David Adom</h1>
+    </div>
+    
+    <div class="row justify-content-md-center">
+        <h2>Injured Report</h2>
+    </div>
+    
+    
+        <div class="card">
+            <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="card-title">Name:</h4>
+                            <p class="font-italic">{{injured?.name}}</p>
+                        </div>
+                        <div class="col">
+                            <h4 class="card-title">Age:</h4>
+                            <p class="font-italic">{{injured?.age}}</p>
+                        </div>
+                        <div class="col">
+                            <h4 class="card-title">Gender:</h4>
+                            <p class="font-italic">{{injured?.gender}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="card-title">Location:</h4>
+                            <p class="font-italic">{{injured?.location}}</p>
+                        </div>
+                        <div class="col">
+                            <h4 class="card-title">Date:</h4>
+                            <p class="font-italic">{{injured?.time}}</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Major Injuries</h4>
+                            <h6>Air Way: <span class="font-italic" > {{injured?.airWay}}  </span></h6>
+                            <h6>Breathing:<span class="font-italic" > {{injured?.breathing}}  </span></h6>
+                            <h6>Shock: ___</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col"> 
+                        <div class="card card-body">
+                            <h4>Actions</h4>
+                            <ul class="list-group">
+                              <li class="list-group-item">Cras justo odio</li>
+                              <li class="list-group-item">Dapibus ac facilisis in</li>
+                              <li class="list-group-item">Morbi leo risus</li>
+                              <li class="list-group-item">Porta ac consectetur ac</li>
+                              <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                        </div> 
+                </div>
+            </div>
+
+                <div class="card">
+                    <div class="table-responsive">
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th>Time</th>  
+                                  <th>Breathing</th>
+                                  <th>heartbeat</th>
+                                  <th>Blood Pressure</th> <!-- add to server -->
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>2</td>
+                                  <td>3</td>
+                                  <td>4</td>
+                                </tr>
+                                 <tr>
+                                  <td>1</td>
+                                  <td>2</td>
+                                  <td>3</td>
+                                  <td>4</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col">
+                       
+                                <h4>To Hospital: <span class="font-italic" > {{injured?.toHospital}}  </span></h4>
+                    </div>
+
+                    <div class="col"> 
+                            <div class="card card-body">
+                                <h4>Severity:<span class="font-italic" > {{injured?.severity}}  </span></h4>
+                            </div> 
+                    </div>
+                </div>
+
+</div>

@@ -16,15 +16,14 @@ export class EmseventsComponent implements OnInit {
 
 
   emsevents: any;
-
-
+ 
   ngOnInit() {
-      this.getAllEvents();
+      this.getAllActiveEvents();
   }
 
-  getAllEvents(){
+   getAllActiveEvents(){
      this._EmsService
-        .getAllEvents()
+        .getAllActiveEvents()
         .subscribe(emsevents => {
           this.emsevents = emsevents;
       } )

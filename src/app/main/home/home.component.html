@@ -1,42 +1,5 @@
-<!-- <div class="container">  
-    <div class="row">
-        <div class="col"> 
-            <div [routerLink]="['/injureds']" class="alert alert-danger" role="alert" style="width: 18rem;">
-                <h2>Active Injureds:</h2>
-                <h3>{{injureds.length}}</h3>
-            </div>
-        </div>
-        <div class="col">
-            <div [routerLink]="['/emsevents']" class="alert alert-warning" role="alert" style="width: 18rem;">
-                <h2>Active Events:</h2>
-                <h3>{{activeEvents.length}}</h3>
-            </div>
-        </div>
-    </div>
-</div>  -->
-
 <div class="container-fluid" id="main">
     <div class="row row-offcanvas row-offcanvas-left">
-        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
-            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Reports▾</a>
-                    <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
-                       <li class="nav-item"><a class="nav-link" href="">Report 1</a></li>
-                       <li class="nav-item"><a class="nav-link" href="">Report 2</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Export</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Snippets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Flexbox</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Layouts</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Templates</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Themes</a></li>
-            </ul>
-        </div>
-        <!--/col-->
 
         <div class="col main pt-5 mt-3">
             <h1 class="display-4 d-none d-sm-block">
@@ -69,7 +32,7 @@
                             <div class="rotate">
                                 <i class="fa fa-list fa-4x"></i>
                             </div>
-                            <h6 class="text-uppercase">Injuresd</h6>
+                            <h6 class="text-uppercase">Injureds</h6>
                             <h1 class="display-4">{{injureds.length}}</h1>
                         </div>
                     </div>

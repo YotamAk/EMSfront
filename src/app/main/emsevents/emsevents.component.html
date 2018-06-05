@@ -1,20 +1,25 @@
 <div class="container">
     <h4>Events</h4>
+   <div class="table-responsive">
     <table class="table table-bordered">
       <thead>
         <tr>
           <td>ID</td>  
           <td>Description</td>
           <td>Create By User</td>
+          <td>Location</td>
           <td>Time</td>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let emsevent of emsevents">
+        <tr *ngFor="let emsevent of emsevents" routerLink="/event-details/{{emsevent.id}}">
           <td>{{emsevent.id}}</td>
           <td>{{emsevent.description}}</td>
           <td>{{emsevent.createByUserID}}</td>
+          <td>{{emsevent.location}}</td>
           <td>{{emsevent.time}}</td>
         </tr>
       </tbody>
     </table>
+  </div>
+</div>

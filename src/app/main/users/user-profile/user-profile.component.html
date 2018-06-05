@@ -10,10 +10,6 @@
                             <p>
                                 {{user?.role}}
                             </p>
-                            <h6>Password</h6>
-                            <p>
-                                {{user?.password}}
-                            </p>
                             <h6>Corp:</h6>
                             <p>
                                 {{user?.corpId}}
@@ -33,6 +29,7 @@
                 </div>
                 
             </div>
+            <button routerLink="/edit-user/{{user?.id}}" type="button" class="btn btn-outline-secondary">Edit</button>
         </div>
         <div class="col-lg-4 order-lg-1 text-center">
             <img src="https://www.w3schools.com/images/w3schools_green.jpg" class="mx-auto img-fluid img-circle d-block" alt="avatar">

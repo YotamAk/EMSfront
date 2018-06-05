@@ -23,14 +23,12 @@ model = new Hospital();
 
 
   addNewHospital(){
-    {
       this._EmsService
         .addNewHospital(this.model)
         .subscribe((result) => {
           console.log(result);
           this.goBack()  
         });
-    }
   }
 
   goBack(){
