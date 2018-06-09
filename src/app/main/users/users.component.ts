@@ -26,8 +26,8 @@ export class UsersComponent implements OnInit {
   getAllActiveUsers(){
      this._EmsService
         .getAllActiveUsers()
-        .subscribe(activeUsers => {
-          this.activeUsers = activeUsers;
+        .subscribe(_activeUsers => {
+          this.activeUsers = _activeUsers;
       } )
   }
 

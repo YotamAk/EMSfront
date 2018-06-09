@@ -17,8 +17,13 @@ export class AddHospitalComponent implements OnInit {
       ) { }
 
 model = new Hospital();
+counts:number[] = [];
 
   ngOnInit() {
+    this.model.location[0] = 3
+    this.model.location[1] = 4
+    this.counts.length = 2;
+    console.log(this.model);
   }
 
 

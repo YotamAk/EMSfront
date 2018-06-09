@@ -142,7 +142,8 @@ getUserById(id){
   editUser(model){
     console.log(model);
     return this._http.post(`${this.ApiUrl}/editUser`,{'UserDetails':model})
-      .map(res => res);
+      .map(function(res) {
+      });
   }
 
   editHospital(model){

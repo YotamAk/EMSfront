@@ -45,14 +45,18 @@ export class EditUserComponent implements OnInit {
   editUser(){
       this._EmsService
         .editUser(this.model)
-        .subscribe((result) => {
-          this.goBack()  
+        .subscribe(() => {
+
         });
+           this.goBack();
+           console.log("IN FUNC");
   }
 
 
+
   goBack(){
-    this.router.navigate(['/users']);
+   console.log("IN GO BACK");
+    this.router.navigate(['/users/..']);
   }
 
 }
