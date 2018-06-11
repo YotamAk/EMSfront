@@ -15,16 +15,16 @@ export class InjuredReportComponent implements OnInit {
       private route: ActivatedRoute
       ) { }
 
-    id = this.route.snapshot.params['id'];
+    QrId = this.route.snapshot.params['QrId'];
     injured:any;
 
   ngOnInit() {
-      this.getInjuredById(this.id);
+      this.getInjuredByQR(this.QrId);
   }
 
-  getInjuredById(id){
+  getInjuredByQR(QrId){
      this._EmsService
-        .getInjuredById(id)
+        .getInjuredByQR(QrId)
         .subscribe(injured => {
           this.injured = injured;
       } )

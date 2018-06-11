@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainComponent } from './main/main.component';
+import { HospitalComponent } from './main/hospital/hospital.component';
+import { EditInjuredComponent } from './main/hospital/edit-injured/edit-injured.component';
 import { EmseventsComponent } from './main/emsevents/emsevents.component';
 import { EventDetailsComponent } from './main/emsevents/event-details/event-details.component';
 import { UsersComponent } from './main/users/users.component';
@@ -24,6 +26,7 @@ const routes: Routes = [
 
 {path:"", redirectTo:"home", pathMatch:"full"},
 {path:"main", component:MainComponent},
+{path:"hospital", component:HospitalComponent},
 {path:"emsevents", component:EmseventsComponent},
 {path:"users", component:UsersComponent},
 {path:"injureds", component:InjuredsComponent},
@@ -33,7 +36,8 @@ const routes: Routes = [
 {path:"user-profile/:id", component:UserProfileComponent},
 {path:"edit-user/:id", component:EditUserComponent},
 {path:"edit-event/:id", component:EditEventComponent},
-{path:"injured-report/:id", component:InjuredReportComponent},
+{path:"edit-injured/:id", component:EditInjuredComponent},
+{path:"injured-report/:QrId", component:InjuredReportComponent},
 {path:"add-user", component:AddUserComponent},
 {path:"login", component:LoginComponent},
 {path:"add-hospital", component:AddHospitalComponent},

@@ -50,7 +50,7 @@ export class EditHospitalComponent implements OnInit {
   }
 
   goBack(){
-    this.router.navigate(['/Hospitals']);
+    this.router.navigate(['/hospitals']);
   }
 
 }

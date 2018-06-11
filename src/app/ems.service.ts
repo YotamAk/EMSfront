@@ -79,6 +79,11 @@ export class EmsService {
       .map(res => res.json());
   }
 
+  getInjuredByQR(QrId){
+    return this._http.get(`${this.ApiUrl}/getInjuredByQR/${QrId}`)
+      .map(res => res.json());
+  }
+
 
   getInjuredById(id){
     return this._http.get(`${this.ApiUrl}/getInjuredById/${id}`)
@@ -117,8 +122,14 @@ export class EmsService {
       .map(res => res.json());
   }
 
+
   SetActiveUser(id){
     return this._http.post(`${this.ApiUrl}/SetActiveUser`,{'id':id})
+      .map(res => res.json());
+  }
+
+  hospitalGetInjured(id){
+    return this._http.post(`${this.ApiUrl}/hospitalGetInjured`,{'id':id})
       .map(res => res.json());
   }
 
@@ -129,6 +140,11 @@ getUserById(id){
 
   getHospitalById(id){
     return this._http.get(`${this.ApiUrl}/getHospitalById/${id}`)
+      .map(res => res.json());
+  }
+
+  activeInjuredsByHospital(toHospital){
+    return this._http.get(`${this.ApiUrl}/activeInjuredsByHospital/${toHospital}`)
       .map(res => res.json());
   }
 
@@ -155,6 +171,12 @@ getUserById(id){
   editEvent(model){
     console.log(model);
     return this._http.post(`${this.ApiUrl}/editEvent`,{'EventDetails':model})
+      .map(res => res);
+  }
+
+  editInjured(model){
+    console.log(model);
+    return this._http.post(`${this.ApiUrl}/editInjured`,{'InjuredDetails':model})
       .map(res => res);
   }
   

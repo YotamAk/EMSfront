@@ -9,15 +9,20 @@
           <td>Severity</td>
           <td>Event Id</td>
           <td>Time</td>
+          <td>Actions</td>
         </tr>
       </thead>
       <tbody>
-        <tr routerLink="/injured-report/{{injured.QrId}}" *ngFor="let injured of injureds">
+        <tr  *ngFor="let injured of injureds">
           <td>{{injured.id}}</td>
-          <td>{{injured.name}}</td>
+          <td routerLink="/injured-report/{{injured.QrId}}">{{injured.name}}</td>
           <td>{{injured.severity}}</td>
           <td>{{injured.eventId}}</td>
           <td>{{injured.time}}</td>
+          <td>
+             <button routerLink="/edit-injured/{{injured?.id}}" type="button" class="btn btn-outline-secondary">Edit</button>
+            <button type="button" class="btn btn-info" (click)="hospitalGetInjured(injured.id)">Received</button>
+          </td>
         </tr>
       </tbody>
     </table>

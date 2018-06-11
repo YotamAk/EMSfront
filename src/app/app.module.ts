@@ -22,6 +22,8 @@ import { EditHospitalComponent } from './main/hospitals/edit-hospital/edit-hospi
 import { EventDetailsComponent } from './main/emsevents/event-details/event-details.component';
 import { EditEventComponent } from './main/emsevents/edit-event/edit-event.component';
 import { InjuredReportComponent } from './main/injureds/injured-report/injured-report.component';
+import { HospitalComponent } from './main/hospital/hospital.component';
+import { EditInjuredComponent } from './main/hospital/edit-injured/edit-injured.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { InjuredReportComponent } from './main/injureds/injured-report/injured-r
     EditHospitalComponent,
     EventDetailsComponent,
     EditEventComponent,
-    InjuredReportComponent
+    InjuredReportComponent,
+    HospitalComponent,
+    EditInjuredComponent
   ],
   imports: [
     BrowserModule,
