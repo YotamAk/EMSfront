@@ -5,7 +5,7 @@
     </div>
     
     <div class="row justify-content-md-center">
-        <h2>Injured Report</h2>
+        <h2>Injured Report {{injured?.QrId}}</h2>
     </div>
     
     
@@ -71,22 +71,16 @@
                                 <tr>
                                   <th>Time</th>  
                                   <th>Breathing</th>
-                                  <th>heartbeat</th>
+                                  <th>Heartbeat</th>
                                   <th>Blood Pressure</th> <!-- add to server -->
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
                                   <td>1</td>
-                                  <td>2</td>
-                                  <td>3</td>
-                                  <td>4</td>
-                                </tr>
-                                 <tr>
-                                  <td>1</td>
-                                  <td>2</td>
-                                  <td>3</td>
-                                  <td>4</td>
+                                  <td>{{injured?.breathing}}</td>
+                                  <td>{{injured?.heartbeat}}</td>
+                                  <td>{{injured?.blood_pressure}}</td>
                                 </tr>
                               </tbody>
                             </table>

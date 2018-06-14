@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmsService } from '../../ems.service';
+import { EmsService } from '../ems.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
@@ -15,16 +15,16 @@ export class HospitalComponent implements OnInit {
       private route: ActivatedRoute
       ) { }
 
-    toHospital = this.route.snapshot.params['toHospital'];
+    name = this.route.snapshot.params['name'];
     injureds: any;
 
   ngOnInit() {
-      this.activeInjuredsByHospital("volfson");
+      this.activeInjuredsByHospital(this.name);
   }
 
-  activeInjuredsByHospital(toHospital){
+  activeInjuredsByHospital(name){
      this._EmsService
-        .activeInjuredsByHospital(toHospital)
+        .activeInjuredsByHospital(name)
         .subscribe(injureds => {
           this.injureds = injureds;
           console.log(injureds);

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EmsService } from '../../../ems.service';
+import { EmsService } from '../../ems.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import { Injured } from '../../../models/injured';
+import { Injured } from '../../models/injured';
 
 @Component({
   selector: 'app-edit-injured',
@@ -44,12 +44,14 @@ export class EditInjuredComponent implements OnInit {
       this._EmsService
         .editInjured(this.model)
         .subscribe((result) => {
+            console.log("Go back")
           this.goBack()  
-                        console.log(this.model)
+          console.log(this.model)
         });
   }
 
   goBack(){
+
     this.router.navigate(['/hospital']);
   }
 

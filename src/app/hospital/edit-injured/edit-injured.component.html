@@ -1,0 +1,53 @@
+<div class="container">
+    <h1 class="display-4 d-none d-sm-block">Edit Injured</h1>
+    <hr>
+    <div class="row">
+      <!-- left column -->
+      
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <h3>Injured Details</h3>
+
+
+        <form (submit)="editInjured()" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-lg-3 control-label">Name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" placeholder="Injured name" required [(ngModel)]="model.name" name="name">
+            </div>
+          </div>
+            
+          <div class="form-group">
+            <label for="phone" class="col-lg-3 control-label">Age</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" placeholder="0-100" [(ngModel)]="model.age" name="age" >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="role" class="col-lg-3 control-label">Gender</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select for="role" [(ngModel)]="model.gender"  name="gender" class="form-control">
+                  <option  value="male">Male</option>
+                  <option  value="female">Female</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          
+          
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input  type="submit" class="btn btn-primary" value="Save Changes">
+            </div>
+          </div>
+
+        </form>
+      </div>
+  </div>
+</div>
+<hr>

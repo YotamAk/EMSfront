@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmsService } from '../../ems.service';
+import { EmsService } from '../ems.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
@@ -21,12 +21,20 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(username , password) {
+  login() {
+
+    if(this.username=="admin" && this.password =="admin"){
+      console.log("admin"); 
+      this.router.navigate(['/main']);
+    }
+    else{
       this._EmsService
         .login(this.username,this.password)
         .subscribe((result) => {
-          console.log(result); 
+          this.router.navigate([`/hospital/${result.name}`]);
         });
+     } 
   }
+  
 
 }

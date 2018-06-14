@@ -43,10 +43,7 @@ export class EditHospitalComponent implements OnInit {
   editHospital(){
       this._EmsService
         .editHospital(this.model)
-        .subscribe((result) => {
-          this.goBack()  
-                        console.log(this.model)
-        });
+        .subscribe(()=> this.goBack());
   }
 
   goBack(){

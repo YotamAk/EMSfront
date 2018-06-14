@@ -165,7 +165,7 @@ getUserById(id){
   editHospital(model){
     console.log(model);
     return this._http.post(`${this.ApiUrl}/editHospital`,{'HospitalDetails':model})
-      .map(res => res);
+      .map(() => "");
   }
 
   editEvent(model){
@@ -175,7 +175,6 @@ getUserById(id){
   }
 
   editInjured(model){
-    console.log(model);
     return this._http.post(`${this.ApiUrl}/editInjured`,{'InjuredDetails':model})
       .map(res => res);
   }
