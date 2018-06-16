@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 export class EmsService {
   constructor(private _http:Http) { }
   checkMe:any;
+  // ApiUrl :string = "http://ec2-54-164-192-2.compute-1.amazonaws.com:3000"
   ApiUrl :string = "http://localhost:3000"
  
   getAllEvents(){
@@ -128,6 +129,11 @@ export class EmsService {
       .map(res => res.json());
   }
 
+  SetToHospital(model){
+    return this._http.post(`${this.ApiUrl}/SetToHospital`,{'InjuredDetails':model})
+      .map(res => res.json());
+  }
+
   hospitalGetInjured(id){
     return this._http.post(`${this.ApiUrl}/hospitalGetInjured`,{'id':id})
       .map(res => res.json());
@@ -148,6 +154,10 @@ getUserById(id){
       .map(res => res.json());
   }
 
+ activeInjuredsByEvent(eventId){
+    return this._http.get(`${this.ApiUrl}/activeInjuredsByEvent/${eventId}`)
+      .map(res => res.json());
+  }
 
   addNewUser(model){
     console.log(model);

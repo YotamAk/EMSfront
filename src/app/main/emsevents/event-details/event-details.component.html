@@ -50,7 +50,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let injured of injureds">
+                    <tr routerLink="/injured-report/{{injured.QrId}}" *ngFor="let injured of injureds">
                       <td>{{injured.id}}</td>
                       <td>{{injured.name}}</td>
                       <td>{{injured.toHospital}}</td>

@@ -67,11 +67,11 @@
             <h2 class="sub-header mt-5">Active Events Now</h2>
             <div class="mb-3">
                 <div class="card-deck">
-                    <div  class="card card-inverse card-success text-center" *ngFor="let activeEvent of activeEvents">
-                        <div class="card-body">
+                    <div   class="card card-inverse card-success text-center" *ngFor="let activeEvent of activeEvents">
+                        <div routerLink="/event-details/{{activeEvent.id}}" class="card-body">
                             <blockquote class="card-blockquote">
                                 <p>{{activeEvent.description}}</p>
-                                <footer>{{activeEvent.time}} <cite title="Source Title">Faster</cite></footer>
+                                <footer>{{activeEvent.time}}</footer>
                             </blockquote>
                         </div>
                     </div>

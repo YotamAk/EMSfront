@@ -20,11 +20,12 @@ import { AddHospitalComponent } from './main/hospitals/add-hospital/add-hospital
 import { EditHospitalComponent } from './main/hospitals/edit-hospital/edit-hospital.component';
 import { EditEventComponent } from './main/emsevents/edit-event/edit-event.component';
 import { InjuredReportComponent } from './main/injureds/injured-report/injured-report.component';
+import { SmartphoneComponent } from './smartphone/smartphone.component';
 
 
 const routes: Routes = [
 
-{path:"", redirectTo:"home", pathMatch:"full"},
+{path:"", redirectTo:"login", pathMatch:"full"},
 {path:"main", component:MainComponent},
 {path:"hospital/:name", component:HospitalComponent},
 {path:"emsevents", component:EmseventsComponent},
@@ -41,7 +42,8 @@ const routes: Routes = [
 {path:"add-user", component:AddUserComponent},
 {path:"login", component:LoginComponent},
 {path:"add-hospital", component:AddHospitalComponent},
-{path:"event-details/:id", component:EventDetailsComponent}
+{path:"event-details/:id", component:EventDetailsComponent},
+{path:"smartphone/:id", component:SmartphoneComponent}
 ];
 
 

@@ -3,4 +3,5 @@ export class Injured {
     name: string;
     age: number;
     gender: string;
+    toHospital:string;
 }

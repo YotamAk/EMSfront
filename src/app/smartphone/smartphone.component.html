@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="table-responsive">
+            <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <td>ID</td>  
+                      <td>Name</td>
+                      <td>Severity</td>
+                      <td>To Hospital:</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let injured of injureds">
+                        <td>{{injured.id}}</td>
+                        <td>{{injured.name}}</td>
+                        <td>{{injured.severity}}</td>
+                        <td>
+                            <form   (submit)="SetToHospital()" class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-lg-4">
+                                      <div class="ui-select">
+                                        <select [(ngModel)]="model.toHospital"  name="toHospital" >
+                                          <option  *ngFor="let hospital of hospitals" >{{hospital.name}}</option> 
+                                        </select>
+                                      </div>
+
+                                    </div>
+                                    <input type="submit" class="btn btn-danger" value="Send">
+                                </div>
+
+                            </form>
+                        </td>
+                    </tr>
+                  </tbody>
+            </table>
+    </div>
+</div>

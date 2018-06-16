@@ -24,6 +24,8 @@ import { EditEventComponent } from './main/emsevents/edit-event/edit-event.compo
 import { InjuredReportComponent } from './main/injureds/injured-report/injured-report.component';
 import { HospitalComponent } from './hospital/hospital.component';
 import { EditInjuredComponent } from './hospital/edit-injured/edit-injured.component';
+import { SmartphoneComponent } from './smartphone/smartphone.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -46,7 +48,8 @@ import { EditInjuredComponent } from './hospital/edit-injured/edit-injured.compo
     EditEventComponent,
     InjuredReportComponent,
     HospitalComponent,
-    EditInjuredComponent
+    EditInjuredComponent,
+    SmartphoneComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,7 @@ import { EditInjuredComponent } from './hospital/edit-injured/edit-injured.compo
     FormsModule,
     HttpModule
   ],
-  providers: [EmsService],
+  providers: [EmsService,{provide: LocationStrategy , useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
