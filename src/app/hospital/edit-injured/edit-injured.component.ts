@@ -43,16 +43,14 @@ export class EditInjuredComponent implements OnInit {
   editInjured(){
       this._EmsService
         .editInjured(this.model)
-        .subscribe((result) => {
-            console.log("Go back")
+        .subscribe(() => {
           this.goBack()  
-          console.log(this.model)
         });
   }
 
   goBack(){
 
-    this.router.navigate(['/hospital']);
+    this.router.navigate([`/hospital/${this.injured.toHospital}`]);
   }
 
 }

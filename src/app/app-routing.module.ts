@@ -21,7 +21,8 @@ import { EditHospitalComponent } from './main/hospitals/edit-hospital/edit-hospi
 import { EditEventComponent } from './main/emsevents/edit-event/edit-event.component';
 import { InjuredReportComponent } from './main/injureds/injured-report/injured-report.component';
 import { SmartphoneComponent } from './smartphone/smartphone.component';
-
+import { ArchiveComponent } from './archive/archive.component';
+import { ArchiveInjuredsComponent } from './archive/archive-injureds/archive-injureds.component';
 
 const routes: Routes = [
 
@@ -43,7 +44,9 @@ const routes: Routes = [
 {path:"login", component:LoginComponent},
 {path:"add-hospital", component:AddHospitalComponent},
 {path:"event-details/:id", component:EventDetailsComponent},
-{path:"smartphone/:id", component:SmartphoneComponent}
+{path:"smartphone/:id", component:SmartphoneComponent},
+{path:"archive", component:ArchiveComponent},
+{path:"archive-injureds/:id", component:ArchiveInjuredsComponent},
 ];
 
 

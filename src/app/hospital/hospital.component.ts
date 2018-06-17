@@ -36,7 +36,7 @@ export class HospitalComponent implements OnInit {
       this._EmsService
         .hospitalGetInjured(id)
         .subscribe(() => {
-
+          this.activeInjuredsByHospital(this.name);
       } )
   }
 

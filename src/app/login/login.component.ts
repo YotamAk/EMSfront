@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { EmsService } from '../ems.service';
+import { SharedService} from '../shared-service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
@@ -11,12 +12,14 @@ export class LoginComponent implements OnInit {
 
   constructor(
       private _EmsService:EmsService,
+      private _sharedService: SharedService,
       private router: Router,
       private route: ActivatedRoute
       ) { }
 
   username : string;
   password : string;
+  @Output() isAdmin = new EventEmitter<Boolean>();
 
   ngOnInit() {
   }
@@ -25,6 +28,8 @@ export class LoginComponent implements OnInit {
 
     if(this.username=="admin" && this.password =="admin"){
       console.log("admin"); 
+      // this.isAdmin.emit(true);
+      this._sharedService.emitChange(true);
       this.router.navigate(['/main']);
     }
     else{

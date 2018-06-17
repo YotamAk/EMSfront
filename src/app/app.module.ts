@@ -26,6 +26,10 @@ import { HospitalComponent } from './hospital/hospital.component';
 import { EditInjuredComponent } from './hospital/edit-injured/edit-injured.component';
 import { SmartphoneComponent } from './smartphone/smartphone.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ArchiveComponent } from './archive/archive.component';
+import { ArchiveInjuredsComponent } from './archive/archive-injureds/archive-injureds.component';
+import { SharedService } from './shared-service';
+
 
 
 @NgModule({
@@ -49,7 +53,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     InjuredReportComponent,
     HospitalComponent,
     EditInjuredComponent,
-    SmartphoneComponent
+    SmartphoneComponent,
+    ArchiveComponent,
+    ArchiveInjuredsComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FormsModule,
     HttpModule
   ],
-  providers: [EmsService,{provide: LocationStrategy , useClass:HashLocationStrategy}],
+  providers: [EmsService,{provide: LocationStrategy , useClass:HashLocationStrategy}, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

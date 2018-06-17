@@ -10,12 +10,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let injured of injureds">
+                    <tr *ngFor="let injured of injureds; let i of index" >
                         <td>{{injured.id}}</td>
                         <td>{{injured.name}}</td>
                         <td>{{injured.severity}}</td>
                         <td>
-                            <form   (submit)="SetToHospital()" class="form-horizontal" role="form">
+                            <form  (submit)="SetToHospital(injured.id)" class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <div class="col-lg-4">
                                       <div class="ui-select">

@@ -43,8 +43,9 @@ export class SmartphoneComponent implements OnInit {
       } )
   }
 
-  SetToHospital(model){
-    console.log(this.model.id);
+  SetToHospital(id){
+    this.model.id=id;
+    console.log(id)
       this._EmsService
         .SetToHospital(this.model)
         .subscribe(() => {

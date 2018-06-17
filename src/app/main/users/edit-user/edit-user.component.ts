@@ -46,10 +46,10 @@ export class EditUserComponent implements OnInit {
       this._EmsService
         .editUser(this.model)
         .subscribe(() => {
-
-        });
-           this.goBack();
+        this.goBack();
            console.log("IN FUNC");
+        });
+           
   }
 
 

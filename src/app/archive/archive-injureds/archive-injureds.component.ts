@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { EmsService } from '../../../ems.service';
+import { EmsService } from '../../ems.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
-  selector: 'app-event-details',
-  templateUrl: './event-details.component.html',
-  styleUrls: ['./event-details.component.css']
+  selector: 'app-archive-injureds',
+  templateUrl: './archive-injureds.component.html',
+  styleUrls: ['./archive-injureds.component.css']
 })
-export class EventDetailsComponent implements OnInit {
+export class ArchiveInjuredsComponent implements OnInit {
 
   constructor(
       private _EmsService:EmsService,
@@ -21,9 +21,8 @@ export class EventDetailsComponent implements OnInit {
 
   ngOnInit() {
       this.getEventById(this.id);
-       this.activeInjuredsByEvent(this.id);
+      this.getInjuredsByEvent(this.id);
   }
-
 
   getEventById(id){
      this._EmsService
@@ -34,9 +33,9 @@ export class EventDetailsComponent implements OnInit {
       } )
   }
 
-  activeInjuredsByEvent(id){
+  getInjuredsByEvent(id){
      this._EmsService
-        .activeInjuredsByEvent(id)
+        .getInjuredsByEvent(id)
         .subscribe(injureds => {
           this.injureds = injureds;
           console.log(injureds);
