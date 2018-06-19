@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
       this.notHospitalInjureds();
-      this.getAllActiveEvents();
+      this.getAllEvents();
       this.getAllActiveUsers();
       this.getAllHospitals();
   }
@@ -35,9 +35,9 @@ export class HomeComponent implements OnInit {
       } )
   }
 
-  getAllActiveEvents(){
+  getAllEvents(){
      this._EmsService
-        .getAllActiveEvents()
+        .getAllEvents()
         .subscribe(activeEvents => {
           this.activeEvents = activeEvents;
       } )

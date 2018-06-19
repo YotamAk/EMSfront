@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { EmsService } from '../ems.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
@@ -11,7 +11,8 @@ export class ArchiveComponent implements OnInit {
 
   constructor(
       private _EmsService:EmsService,
-      private router: Router
+      private router: Router,
+      private elementRef: ElementRef
       ) { }
 
   emsevents: any;
@@ -27,5 +28,9 @@ export class ArchiveComponent implements OnInit {
           this.emsevents = emsevents;
       } )
   }
+
+  ngAfterViewInit(){
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#2D2D30';
+ }
 
 }

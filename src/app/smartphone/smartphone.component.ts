@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { EmsService } from '../ems.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import { Injured } from '../models/injured';
@@ -13,7 +13,8 @@ export class SmartphoneComponent implements OnInit {
   constructor(
       private _EmsService:EmsService,
       private router: Router,
-      private route: ActivatedRoute
+      private route: ActivatedRoute,
+      private elementRef: ElementRef
       ) { }
 
   injureds:any;
@@ -45,12 +46,18 @@ export class SmartphoneComponent implements OnInit {
 
   SetToHospital(id){
     this.model.id=id;
-    console.log(id)
+
       this._EmsService
         .SetToHospital(this.model)
         .subscribe(() => {
+          this.activeInjuredsByEvent(this.id);
+          console.log(this.id);
           
       } )
   }
+
+  ngAfterViewInit(){
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#2D2D30';
+ }
 
 }

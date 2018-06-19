@@ -70,8 +70,8 @@
                     <div   class="card card-inverse card-success text-center" *ngFor="let activeEvent of activeEvents">
                         <div routerLink="/event-details/{{activeEvent.id}}" class="card-body">
                             <blockquote class="card-blockquote">
-                                <p>{{activeEvent.description}}</p>
-                                <footer>{{activeEvent.time}}</footer>
+                                <p>{{activeEvent.EventDescription}}</p>
+                                <footer>{{activeEvent.EventTime}}</footer>
                             </blockquote>
                         </div>
                     </div>

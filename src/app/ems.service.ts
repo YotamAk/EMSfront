@@ -6,8 +6,8 @@ import 'rxjs/add/operator/map';
 export class EmsService {
   constructor(private _http:Http) { }
   checkMe:any;
-  // ApiUrl :string = "http://ec2-54-164-192-2.compute-1.amazonaws.com:3000"
-  ApiUrl :string = "http://localhost:3000"
+//  ApiUrl :string = "http://ec2-54-164-192-2.compute-1.amazonaws.com:3000"
+ ApiUrl :string = "http://localhost:3000"
  
   getAllEvents(){
     return this._http.get(`${this.ApiUrl}/getAllEvents`)  

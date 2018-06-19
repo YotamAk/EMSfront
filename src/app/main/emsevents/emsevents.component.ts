@@ -18,12 +18,12 @@ export class EmseventsComponent implements OnInit {
   emsevents: any;
  
   ngOnInit() {
-      this.getAllActiveEvents();
+      this.getAllEvents();
   }
 
-   getAllActiveEvents(){
+   getAllEvents(){
      this._EmsService
-        .getAllActiveEvents()
+        .getAllEvents()
         .subscribe(emsevents => {
           this.emsevents = emsevents;
       } )

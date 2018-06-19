@@ -1,8 +1,7 @@
 export class Emsevent {
     id : string;
-    description: string;
+    EventDescription: string;
     createByUserID: string;
-    time: string;
-    location:[number];
-    active: boolean;
+    EventTime: string;
+    location:[string];
 }

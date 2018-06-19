@@ -31,11 +31,11 @@ export class EditEventComponent implements OnInit {
         .getEventById(id)
         .subscribe(emsevent => {
           this.emsevent = emsevent;
-          this.model.description = this.emsevent.description;
+          this.model.EventDescription = this.emsevent.EventDescription;
           this.model.createByUserID = this.emsevent.createByUserID;
-          this.model.time = this.emsevent.time;
+          this.model.EventTime = this.emsevent.EventTime;
           this.model.location = this.emsevent.location;
-          this.model.active = this.emsevent.active;
+          
       } )
     }
   }

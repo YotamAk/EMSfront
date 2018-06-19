@@ -1,4 +1,7 @@
 <div class="container">
+    <h1 class="display-4 d-none d-sm-block">
+        Archive
+        </h1>
     <h4>Events</h4>
    <div class="table-responsive">
     <table class="table table-bordered">
@@ -14,10 +17,10 @@
       <tbody>
         <tr *ngFor="let emsevent of emsevents" routerLink="/archive-injureds/{{emsevent.id}}">
           <td>{{emsevent.id}}</td>
-          <td>{{emsevent.description}}</td>
+          <td>{{emsevent.EventDescription}}</td>
           <td>{{emsevent.createByUserID}}</td>
           <td>{{emsevent.location}}</td>
-          <td>{{emsevent.time}}</td>
+          <td>{{emsevent.EventTime}}</td>
         </tr>
       </tbody>
     </table>

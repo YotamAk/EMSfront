@@ -1,4 +1,7 @@
 <div class="container">
+    <h1 class="display-4 d-none d-sm-block">
+        Event Management
+    </h1>
     <div class="table-responsive">
             <table class="table table-bordered">
                   <thead>
@@ -15,20 +18,27 @@
                         <td>{{injured.name}}</td>
                         <td>{{injured.severity}}</td>
                         <td>
-                            <form  (submit)="SetToHospital(injured.id)" class="form-horizontal" role="form">
+                            <form *ngIf= "injured.toHospital ==='Unknown'; else view" (submit)="SetToHospital(injured.id)" class="form-horizontal" role="form">
                                 <div class="form-group">
-                                    <div class="col-lg-4">
-                                      <div class="ui-select">
-                                        <select [(ngModel)]="model.toHospital"  name="toHospital" >
-                                          <option  *ngFor="let hospital of hospitals" >{{hospital.name}}</option> 
-                                        </select>
+                                  <div class="row">
+                                      <div class="col-sm">
+                                        <div class="ui-select">
+                                          <select [(ngModel)]="model.toHospital"  name="toHospital" >
+                                            <option  *ngFor="let hospital of hospitals" >{{hospital.name}}</option> 
+                                          </select>
+                                        </div>
                                       </div>
 
+                                      <div class="col-sm">
+                                        <input type="submit" class="btn btn-danger" value="Send">
+                                      </div>
+                                      
                                     </div>
-                                    <input type="submit" class="btn btn-danger" value="Send">
                                 </div>
-
                             </form>
+                            <ng-template #view>
+                              <p>{{injured.toHospital}}</p>
+                            </ng-template>
                         </td>
                     </tr>
                   </tbody>

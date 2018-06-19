@@ -14,10 +14,10 @@
       <tbody>
         <tr *ngFor="let emsevent of emsevents" routerLink="/event-details/{{emsevent.id}}">
           <td>{{emsevent.id}}</td>
-          <td>{{emsevent.description}}</td>
+          <td>{{emsevent.EventDescription}}</td>
           <td>{{emsevent.createByUserID}}</td>
           <td>{{emsevent.location}}</td>
-          <td>{{emsevent.time}}</td>
+          <td>{{emsevent.EventTime}}</td>
         </tr>
       </tbody>
     </table>
