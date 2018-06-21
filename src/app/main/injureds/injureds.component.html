@@ -17,7 +17,7 @@
           <td>{{injured.name}}</td>
           <td>{{injured.severity}}</td>
           <td>{{injured.eventId}}</td>
-          <td>{{injured.time}}</td>
+          <td>{{injured.time| date:'yyyy-MM-dd HH:mm a z':'+0300'}}</td>
         </tr>
       </tbody>
     </table>

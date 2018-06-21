@@ -29,6 +29,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ArchiveComponent } from './archive/archive.component';
 import { ArchiveInjuredsComponent } from './archive/archive-injureds/archive-injureds.component';
 import { SharedService } from './shared-service';
+import { SmartphoneHomeComponent } from './smartphone/smartphone-home/smartphone-home.component';
 
 
 
@@ -55,7 +56,8 @@ import { SharedService } from './shared-service';
     EditInjuredComponent,
     SmartphoneComponent,
     ArchiveComponent,
-    ArchiveInjuredsComponent
+    ArchiveInjuredsComponent,
+    SmartphoneHomeComponent
   ],
   imports: [
     BrowserModule,
