@@ -1,7 +1,7 @@
 <div class="container">
-    <h4>Events</h4>
+    <h2 class="sub-header mt-5">Events</h2>
    <div class="table-responsive">
-    <table class="table table-bordered">
+    <table class="table table-striped">
       <thead>
         <tr>
           <td>ID</td>  
@@ -17,7 +17,7 @@
           <td>{{emsevent.EventDescription}}</td>
           <td>{{emsevent.createByUserID}}</td>
           <td>{{emsevent.location}}</td>
-          <td>{{emsevent.EventTime}}</td>
+          <td>{{emsevent.EventTime| date:'yyyy-MM-dd HH:mm a z':'+0300'}}</td>
         </tr>
       </tbody>
     </table>

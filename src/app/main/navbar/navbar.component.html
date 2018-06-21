@@ -1,13 +1,13 @@
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+<nav id="mainNavbar" class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
     <a class="navbar-brand" [routerLink]="['/home']">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+           aria-expanded="false" aria-label="Toggle navigation"
+           (click)="toggleCollapsed()">
           <span class="navbar-toggler-icon"></span>
         </button>
-    <div class="navbar-collapse collapse" id="navbarCollapse">
+    <div class="navbar-collapse collapse" id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
         <ul class="navbar-nav mr-auto">
-            <li [routerLinkActive]="['active']" class="nav-item active">
-                <a [routerLink]="['/home']" class="nav-link">Home </a>
-            </li>
             <li [routerLinkActive]="['active']" class="nav-item">
                 <a [routerLink]="['/users']"  class="nav-link">Users </a>
             </li>
@@ -23,3 +23,4 @@
         </ul>
     </div>
 </nav>
+

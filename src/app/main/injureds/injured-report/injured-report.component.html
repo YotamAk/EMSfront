@@ -32,7 +32,7 @@
                         </div>
                         <div class="col">
                             <h4 class="card-title">Date:</h4>
-                            <p class="font-italic">{{injured?.time}}</p>
+                            <p class="font-italic">{{injured?.time| date:'yyyy-MM-dd HH:mm a z':'+0300'}}</p>
                         </div>
                     </div>
             </div>
@@ -45,7 +45,6 @@
                             <h4 class="card-title">Major Injuries</h4>
                             <h6>Air Way: <span class="font-italic" > {{injured?.airWay}}  </span></h6>
                             <h6>Breathing:<span class="font-italic" > {{injured?.breathing}}  </span></h6>
-                            <h6>Shock: ___</h6>
                         </div>
                     </div>
                 </div>

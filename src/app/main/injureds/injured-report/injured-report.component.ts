@@ -39,13 +39,14 @@ export class InjuredReportComponent implements OnInit {
           if (injured.severity === 'OK'){
             this.severity = this.OK
           }
-          if (injured.severity === 'urgent-stable'){
+          if (injured.severity === 'urgent stable'){
+            console.log(injured.severity);
             this.severity = this.urgent_stable
           }
           if (injured.severity === 'critical'){
             this.severity = this.critical
           }
-          if (injured.severity === 'not-urgent'){
+          if (injured.severity === 'not urgent'){
             this.severity = this.not_urgent
           }
           if (injured.severity === 'dead'){

@@ -16,7 +16,7 @@
                             </p>
                             <h6>time:</h6>
                             <p>
-                                {{emsEvent?.EventTime}}
+                                {{emsEvent?.EventTime| date:'yyyy-MM-dd HH:mm a z':'+0300'}}
                             </p>
                             <h6>location</h6>
                             <p>
@@ -51,7 +51,7 @@
                       <td>{{injured.name}}</td>
                       <td>{{injured.toHospital}}</td>
                       <td>{{injured.severity}}</td>
-                      <td>{{injured.time}}</td>
+                      <td>{{injured.time| date:'yyyy-MM-dd HH:mm a z':'+0300'}}</td>
                     </tr>
                   </tbody>
                 </table>

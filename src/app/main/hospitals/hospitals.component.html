@@ -1,25 +1,28 @@
-<h2 class="sub-header mt-5">Hospitals</h2>
-  <div class="table-responsive">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>ID</th>  
-          <th>Name</th>
-          <th>Location</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let hospital of hospitals">
-          <td>{{hospital.id}}</td>
-          <td>{{hospital.name}}</td>
-          <td>{{hospital.location}}</td>
-          <td>
-             <button routerLink="/edit-hospital/{{hospital?.id}}" type="button" class="btn btn-primary">Edit</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<div class="container">
+  <h2 class="sub-header mt-5">Hospitals</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>  
+            <th>Name</th>
+            <th>Location</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hospital of hospitals">
+            <td>{{hospital.id}}</td>
+            <td>{{hospital.name}}</td>
+            <td>{{hospital.location}}</td>
+            <td>
+              <button routerLink="/edit-hospital/{{hospital?.id}}" type="button" class="btn btn-primary">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-<button [routerLink]="['/add-hospital']" type="button" class="btn btn-primary">Add Hospital</button>
+  <button [routerLink]="['/add-hospital']" type="button" class="btn btn-primary">Add Hospital</button>
+  <hr>
+</div>
