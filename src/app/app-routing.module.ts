@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { HospitalComponent } from './hospital/hospital.component';
 import { EditInjuredComponent } from './hospital/edit-injured/edit-injured.component';
+import { ArchiveHospitalComponent } from './hospital/archive-hospital/archive-hospital.component';
 import { EmseventsComponent } from './main/emsevents/emsevents.component';
 import { EventDetailsComponent } from './main/emsevents/event-details/event-details.component';
 import { UsersComponent } from './main/users/users.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
 {path:"", redirectTo:"login", pathMatch:"full"},
 {path:"main", component:MainComponent},
 {path:"hospital/:name", component:HospitalComponent},
+{path:"archive-hospital/:name", component:ArchiveHospitalComponent},
 {path:"emsevents", component:EmseventsComponent},
 {path:"users", component:UsersComponent},
 {path:"injureds", component:InjuredsComponent},

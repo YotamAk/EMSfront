@@ -20,7 +20,7 @@ export class SmartphoneHomeComponent implements OnInit {
   ngOnInit() {
     this.getAllEvents()
   }
-
+  id:string;
   emsevents:any;
 
   getAllEvents(){
@@ -31,9 +31,9 @@ export class SmartphoneHomeComponent implements OnInit {
      } )
  }
 
-//  goto(id){
-//    console.log(id);
-//   this.router.navigate([`smartphone/${id}`]);
-//  }
+ goto(id){
+    console.log(this.id);
+this.router.navigate([`smartphone/${this.id}`]);
+  }
 
 }

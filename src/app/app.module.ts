@@ -30,6 +30,7 @@ import { ArchiveComponent } from './archive/archive.component';
 import { ArchiveInjuredsComponent } from './archive/archive-injureds/archive-injureds.component';
 import { SharedService } from './shared-service';
 import { SmartphoneHomeComponent } from './smartphone/smartphone-home/smartphone-home.component';
+import { ArchiveHospitalComponent } from './hospital/archive-hospital/archive-hospital.component';
 
 
 
@@ -57,7 +58,8 @@ import { SmartphoneHomeComponent } from './smartphone/smartphone-home/smartphone
     SmartphoneComponent,
     ArchiveComponent,
     ArchiveInjuredsComponent,
-    SmartphoneHomeComponent
+    SmartphoneHomeComponent,
+    ArchiveHospitalComponent
   ],
   imports: [
     BrowserModule,

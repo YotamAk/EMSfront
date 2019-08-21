@@ -10,16 +10,16 @@
                             <h3 class="mb-0">Login</h3>
                         </div>
                         <div class="card-body">
-                            <form class="form" role="form">
+                            <form (submit)="goto()" class="form" role="form">
                                 <div class="col-sm">
                                     <div class="ui-select">
-                                      <select>
+                                      <select [(ngModel)]="id" name="id">
                                         <option  *ngFor="let emsevent of emsevents" >{{emsevent.id}}</option> 
                                       </select>
                                     </div>
                                   </div>
                                 
-                                <button routerLink="/smartphone/{{emsevent?.id}}" type="submit" class="btn btn-success btn-lg">Manage Event</button>
+                                <button type="submit" class="btn btn-danger btn-lg">Manage Event</button>
                             </form>
                         </div>
                         <!--/card-block-->

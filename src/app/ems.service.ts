@@ -6,10 +6,11 @@ import 'rxjs/add/operator/map';
 export class EmsService {
   constructor(private _http:Http) { }
   checkMe:any;
- ApiUrl :string = "http://ec2-54-164-192-2.compute-1.amazonaws.com:3000"
-//  ApiUrl :string = "http://localhost:3000"
+  //  ApiUrl :string = "http://ec2-54-210-147-48.compute-1.amazonaws.com:3000" //production API
+    ApiUrl :string = "http://localhost:3000"  // Local host
  
-  getAllEvents(){
+  // received all Event from DB
+  getAllEvents(){ 
     return this._http.get(`${this.ApiUrl}/getAllEvents`)  
       .map(res=>{
         this.checkMe = res;
@@ -20,6 +21,7 @@ export class EmsService {
       });
   }
 
+  // received all iNJUREDS from DB
   getAllInjureds(){
     return this._http.get(`${this.ApiUrl}/getAllInjureds`)  
       .map(res=>{
@@ -75,17 +77,25 @@ export class EmsService {
       });
   }
 
+  //get event id and retuen all injureds of this event
   getInjuredsByEvent(eventId){
     return this._http.get(`${this.ApiUrl}/getInjuredsByEvent/${eventId}`)
       .map(res => res.json());
   }
 
+  //return all Injureds by hospital name
+  InjuredsByHospital(toHospital){
+    return this._http.get(`${this.ApiUrl}/InjuredsByHospital/${toHospital}`)
+      .map(res => res.json());
+  }
+
+  //return injured data by QrID
   getInjuredByQR(QrId){
     return this._http.get(`${this.ApiUrl}/getInjuredByQR/${QrId}`)
       .map(res => res.json());
   }
 
-
+  //return Injured data by his id
   getInjuredById(id){
     return this._http.get(`${this.ApiUrl}/getInjuredById/${id}`)
       .map(res => res.json());

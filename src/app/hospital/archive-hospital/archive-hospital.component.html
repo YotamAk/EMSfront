@@ -5,13 +5,11 @@
               <a [routerLink]="['/hospital/'+name]"  class="nav-link">Hospital</a>
           </li>
           <li [routerLinkActive]="['active']" class="nav-item">
-              <a [routerLink]="['/archive-hospital/'+name]" class="nav-link">Archive </a>
+              <a [routerLink]="['/archive-hospital/'+name]" class="nav-link">Archive</a>
           </li>
       </ul>
   </div>
 </nav>
-
-
 <div class="container">
     <h1 class="display-4 d-none d-sm-block">
         {{name}}

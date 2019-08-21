@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmsService } from '../ems.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
+import {Observable} from 'rxjs/Rx';
 
 @Component({
   selector: 'app-hospital',
@@ -19,8 +20,13 @@ export class HospitalComponent implements OnInit {
     injureds: any;
 
   ngOnInit() {
-      this.activeInjuredsByHospital(this.name);
+    this.activeInjuredsByHospital(this.name);
+      Observable.interval(10000).subscribe(()=> {
+        this.activeInjuredsByHospital(this.name);
+      });
+      
   }
+  
 
   activeInjuredsByHospital(name){
      this._EmsService
